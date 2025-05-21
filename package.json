@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "**/*.{ts,js,json}": [
-      "ng lint --fix"
+      "eslint --max-warnings=0 --fix"
     ],
     "**/*.{ts,js,json,css,scss,html,md}": [
       "prettier --write"
