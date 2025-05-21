@@ -11,14 +11,12 @@
     "format": "prettier --write .",
     "lint:fix": "ng lint --fix",
     "fix-all": "npm run format && npm run lint:fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
-    "**/*.{ts,js,json}": [
-      "eslint --max-warnings=0 --fix"
-    ],
-    "**/*.{ts,js,json,css,scss,html,md}": [
-      "prettier --write"
+    "**/*.{ts,js,json,css,scss,html}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "private": true,
@@ -44,7 +42,7 @@
     "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
     "angular-eslint": "19.4.0",
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0",
     "husky": "^9.1.7",
